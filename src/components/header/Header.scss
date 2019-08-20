@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+  .PublicHeader {
+    width: 100%;
+    height: 1rem;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    box-sizing: border-box;
+    font-size: .30rem;
+    background: rgba(0, 191, 255, 1);
+    color: rgba(255, 255, 255, 1);
+
+    .searchIcon {
+      width: 10%;
+    }
+
+    .searchBox {
+      width: 70%;
+      text-align: center;
+    }
+
+    .loginIcon {
+      width: 20%;
+    }
+  }
+}

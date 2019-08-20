@@ -1,0 +1,11 @@
+.Home {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 1rem;
+  left: 0px;
+  bottom: 1.01rem;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
