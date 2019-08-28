@@ -1,40 +1,41 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getGuessCity } from './../../reducer/actions/common.js';
-import { getIndexEntry, getMerchantList } from './../../reducer/actions/home.js';
+// import { getGuessCity } from './../../reducer/actions/common.js';
+import { GetQueryString } from "./../../assets/js/commonFunction.js";
+import { getMerchantList } from './../../reducer/actions/home.js';
 
 import PublicHeader from './../../components/header/Header.jsx';
-import PublicFooter from './../../components/footer/Footer.jsx';
 import Loading from "./../../components/loading/Loading.jsx";
-import FoodCategorty from './foodCategorty/FoodCategorty.jsx';
 import MerchantList from './../../components/merchant/Merchant';
 
-import './Home.css';
+import './FoodCate.css';
 
-class Home extends Component {
+class FoodCate extends Component {
   constructor(props) {
     super(props);
     this.state = {
       width: document.documentElement.clientWidth,
       height: document.documentElement.clientHeight,
-      isLoading: true
+      isLoading: true,
+      title: ''
     }
 
   }
 
   componentDidMount() {
-
-    this.props.getGuessCity();
-    this.props.getIndexEntry();
+    let title = GetQueryString('title');
+    let id = GetQueryString('restaurant_category_id');
 
     let params = {
       latitude: '31.22299',
-      longitude: '121.4762'
+      longitude: '121.4762',
+      restaurant_category_id: id
     }
     this.props.getMerchantList(params);
-    
+
     this.setState((prevState, props) => ({
-        isLoading: !prevState.isLoading
+        isLoading: !prevState.isLoading,
+        title: title
       })
     )
   }
@@ -43,22 +44,18 @@ class Home extends Component {
     return (
       <div style={{width: this.state.width, height: this.state.height}}>
         <Loading isLoading={this.state.isLoading}></Loading>
-        <PublicHeader city={this.props.guessCity} type='home' />
-        <div className="Home">
-          <FoodCategorty index_entry={this.props.index_entry}></FoodCategorty>
+        <PublicHeader city={this.props.guessCity} type='food' title={this.state.title} />
+        <div className="FoodCate">
           <MerchantList merchant_list={this.props.merchant_list}></MerchantList>
         </div>
-        <PublicFooter />
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  guessCity: state.common.guessCity,
-  index_entry: state.home.index_entry,
   merchant_list: state.home.merchant_list
 })
 
 
-export default connect(mapStateToProps, { getGuessCity, getIndexEntry, getMerchantList })(Home);
+export default connect(mapStateToProps, { getMerchantList })(FoodCate);

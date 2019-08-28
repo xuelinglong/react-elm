@@ -5,6 +5,7 @@ import Home from './views/home/Home.jsx';
 import Search from './views/search/Search.jsx';
 import Order from './views/order/Order.jsx';
 import User from './views/user/User.jsx';
+import FoodCate from './views/foodCate/FoodCate.jsx';
 
 const Main = () => (
   <main>
@@ -13,6 +14,7 @@ const Main = () => (
       <Route exact path='/search' component={Search}/>
       <Route exact path='/order' component={Order}/>
       <Route exact path='/user' component={User}/>
+      <Route exact path='/foodCate' component={FoodCate}/>
     </Switch>
   </main>
 )

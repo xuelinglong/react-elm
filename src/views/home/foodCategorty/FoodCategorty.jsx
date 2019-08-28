@@ -19,7 +19,7 @@ export default class FoodCategorty extends Component {
       <div className="FoodCategorty" >
         {
           index_entry && index_entry.map((item,index) => (
-            <NavLink className="food_categorty_item" to="/foodCategorty" style={{display: (index < 8) ? 'block' : 'none' }} key={item.id}>
+            <NavLink className="food_categorty_item" to={ `/foodCate?title=${item.title}&restaurant_category_id=${item.id}` } style={{display: (index < 8) ? 'block' : 'none' }} key={item.id}>
               <img className="cateImg" src={'https://fuss10.elemecdn.com' + item.image_url} alt="" />
               <p>{item.title}</p>
             </NavLink>
