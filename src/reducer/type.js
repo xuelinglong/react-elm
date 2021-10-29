@@ -1,6 +1,7 @@
 // common
 export const GET_GUESS_CITY = 'GET_GUESS_CITY'; // 获取定位城市
 export const CHANGE_FOOTER_SELECT = 'CHANGE_FOOTER_SELECT'; // 更改底部选项卡
+export const CHANGE_TAB_LEVEL = 'CHANGE_TAB_LEVEL'; // 更改页面等级
 
 // home
 export const GET_INDEX_ENTRY = 'GET_INDEX_ENTRY'; // 获取食品分类列表

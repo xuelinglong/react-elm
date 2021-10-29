@@ -19,3 +19,10 @@ export const changeFooterSelect = (tab, title) => dispatch => {
     title: title
   })
 };
+
+export const changeTabLevel = (tabLevel) => dispatch => {
+  dispatch ({
+    type: type.CHANGE_TAB_LEVEL,
+    tabLevel: tabLevel
+  })
+};

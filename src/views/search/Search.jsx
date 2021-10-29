@@ -14,7 +14,8 @@ class Search extends Component {
     this.state = {
       width: document.documentElement.clientWidth,
       height: document.documentElement.clientHeight,
-      isLoading: true
+      isLoading: true,
+      keywords: ''
     }
 
   }
@@ -31,7 +32,9 @@ class Search extends Component {
       <div style={{width: this.state.width, height: this.state.height}}>
         <Loading isLoading={this.state.isLoading}></Loading>
         <PublicHeader city={this.props.guessCity} />
-        <div className="Search"></div>
+        <div className="Search">
+
+        </div>
         <PublicFooter />
       </div>
     )
