@@ -11,7 +11,7 @@ export default class Header extends Component {
   }
 
   back = () => {
-    this.props.history.goBack();
+    window.history.back(-1);
   }
 
   render() {

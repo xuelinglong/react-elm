@@ -16,7 +16,7 @@ export default class FoodCategorty extends Component {
   render() {
     let index_entry = this.props.index_entry;
     return (
-      <div className="FoodCategorty" >
+      <div className="FoodCategorty bg-white" >
         {
           index_entry && index_entry.map((item,index) => (
             <NavLink className="food_categorty_item" to={ `/foodCate?title=${item.title}&restaurant_category_id=${item.id}` } style={{display: (index < 8) ? 'block' : 'none' }} key={item.id}>

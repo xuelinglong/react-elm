@@ -14,7 +14,7 @@ export default class Merchant extends Component {
     let list = this.props.merchant_list;
     return (
       <div>
-        <ul className="merchantList_ul">
+        <ul className="merchantList_ul bg-white">
           {
             list && list.map((item, index) => (
               <li className="merchantList_li" key={item.id}>
@@ -22,16 +22,16 @@ export default class Merchant extends Component {
                   <img className="merchantImg" src={'https://elm.cangdu.org/img/' + item.image_path} alt=""/>
                 </section>
                 <hgroup>
-                  <header>
-                    <p className="merchant_title">{item.name}</p>
-                    <ul>
-                      <li>保</li>
-                      <li>准</li>
-                      <li>票</li>
-                    </ul>
+                  <header className="flex justify-between align-center">
+                    <p className="merchant_title flex-sub text-left text-cut">{item.name}</p>
+                    <div className="merchant_title_right flex">
+                      <span>保</span>
+                      <span>准</span>
+                      <span>票</span>
+                    </div>
                   </header>
                   <div className="star_line">
-                    <section className="star_left">
+                    <section className="star_left flex-sub">
                       <div className="star_box">
                         <section>星星</section>
                         <span> {item.rating} </span>
