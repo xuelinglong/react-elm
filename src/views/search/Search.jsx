@@ -27,6 +27,13 @@ class Search extends Component {
     )
   }
 
+  inputChange(e) {
+    let val = e.target.value;
+    this.setState({
+      keywords: val
+    });
+  }
+
   render() {
     return (
       <div style={{width: this.state.width, height: this.state.height}}>
@@ -34,13 +41,13 @@ class Search extends Component {
         <PublicHeader city={this.props.guessCity} />
           <div className="Search bg-white flex justify-between align-center">
             <div className="basis-xl flex margin-right-xs">
-              <input type="text" placeholder="请输入商家或美食名城" confirm-type="search"></input>
+              <input ref="keywords" type="text" placeholder="请输入商家或美食名城" confirm-type="search" onChange={this.inputChange.bind(this)}></input>
             </div>
             <div className="basis-xs flex">
               <button class="bg-blue">搜索</button>
             </div>
           </div>
-          <div className="content">
+          <div className="SearchContent">
             <div className="text-lg fontWeight-lg text-left padding-sm">搜索历史</div>
             <div className="bg-white">
               <div className="text-lg text-left padding-sm flex align-center justify-between solid-bottom">
