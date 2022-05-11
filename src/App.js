@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './assets/css/main.css'
 import { BrowserRouter } from 'react-router-dom';
 
 // import { GetData } from './reducer/fetch.js';

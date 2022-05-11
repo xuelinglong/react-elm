@@ -1,9 +1,7 @@
 .Search {
   width: 100%;
-  height: auto;
-  position: fixed;
-  top: 1rem;
-  left: 0px;
-  bottom: 1.01rem;
+  height: 0.9rem;
   text-align: center;
+  padding: 0.06rem 0.3rem;
+  box-sizing: border-box;
 }

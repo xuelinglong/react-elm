@@ -3,7 +3,8 @@ import * as type from './../type.js';
 const initialState = {
   guessCity: {},
   activeFooter: 'elm',
-  title: '饿了么'
+  title: '饿了么',
+  tabLevel: 1
 };
 
 const common = (state = initialState, action)=> {
@@ -18,6 +19,10 @@ const common = (state = initialState, action)=> {
           activeFooter: action.activeFooter,
           title: action.title
         })
+    case type.CHANGE_TAB_LEVEL:
+      return Object.assign({}, state, {
+        tabLevel: action.tabLevel
+      })
     // default的情况下返回旧的state
     default:
       return state;

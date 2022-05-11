@@ -29,7 +29,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer className="PublicFooter">
+      <footer className="PublicFooter solid-top">
         <ul className="footer_bar">
           <NavLink className="footer_bar_item" to="/">
             <li className={ this.props.active === 'elm' ? 'active': ''} onClick={this.changeSelected.bind(this, 'elm','elm')}>
