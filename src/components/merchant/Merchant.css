@@ -9,6 +9,7 @@
   display: flex;
   border-bottom: .025rem solid #f1f1f1;
   padding: .42rem .2rem;
+  box-sizing: border-box;
 }
 
 .merchantList_li > section {
@@ -35,6 +36,7 @@
 
 .merchantList_li > hgroup {
   flex: auto;
+  box-sizing: border-box;
 }
 
 .merchantList_li > hgroup > header {
@@ -44,12 +46,13 @@
 }
 
 .merchant_title {
-  width: 80%;
+  width: 3.6rem;
   font-size: .32rem;
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .merchant_title::before {

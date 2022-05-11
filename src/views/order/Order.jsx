@@ -30,7 +30,7 @@ class Order extends Component {
     return (
       <div style={{width: this.state.width, height: this.state.height}}>
         <Loading isLoading={this.state.isLoading}></Loading>
-        <PublicHeader city={this.props.guessCity} />
+        <PublicHeader city={this.props.guessCity} title={'订单'} type={'order'} />
         <div className="Order"></div>
         <PublicFooter />
       </div>

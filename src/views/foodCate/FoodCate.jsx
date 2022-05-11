@@ -44,7 +44,7 @@ class FoodCate extends Component {
     return (
       <div style={{width: this.state.width, height: this.state.height}}>
         <Loading isLoading={this.state.isLoading}></Loading>
-        <PublicHeader city={this.props.guessCity} type='food' title={this.state.title} />
+        <PublicHeader city={this.props.guessCity} type='food' title={this.state.title} back={this.props.history.goBack} />
         <div className="FoodCate">
           <MerchantList merchant_list={this.props.merchant_list}></MerchantList>
         </div>

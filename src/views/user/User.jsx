@@ -30,7 +30,7 @@ class User extends Component {
     return (
       <div style={{width: this.state.width, height: this.state.height}}>
         <Loading isLoading={this.state.isLoading}></Loading>
-        <PublicHeader city={this.props.guessCity} />
+        <PublicHeader city={this.props.guessCity} title={'我的'} type={'user'} />
         <div className="User"></div>
         <PublicFooter />
       </div>

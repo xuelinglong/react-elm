@@ -30,7 +30,7 @@ class Search extends Component {
     return (
       <div style={{width: this.state.width, height: this.state.height}}>
         <Loading isLoading={this.state.isLoading}></Loading>
-        <PublicHeader city={this.props.guessCity} />
+        <PublicHeader city={this.props.guessCity} title={'搜索'} type={'search'} />
         <div className="Search"></div>
         <PublicFooter />
       </div>
